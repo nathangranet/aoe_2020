@@ -351,13 +351,14 @@ __meta__ = {
 
 [node name="Head" type="Sprite" parent="Node2D"]
 position = Vector2( 2.50333, -60.2027 )
+z_index = 4
 texture = ExtResource( 2 )
-offset = Vector2( 0, -50 )
+offset = Vector2( -6, -50 )
 
 [node name="Arm1" type="Sprite" parent="Node2D"]
-position = Vector2( -8.00201, -44.5385 )
+position = Vector2( 6, -30 )
 texture = ExtResource( 4 )
-offset = Vector2( 0, 50 )
+offset = Vector2( 32, 60 )
 
 [node name="Leg1" type="Sprite" parent="Node2D"]
 position = Vector2( -3.78172, 38.1994 )
@@ -376,7 +377,7 @@ offset = Vector2( 0, 50 )
 [node name="Arm2" type="Sprite" parent="Node2D"]
 position = Vector2( -0.767601, -39.0398 )
 texture = ExtResource( 4 )
-offset = Vector2( 0, 50 )
+offset = Vector2( -36, 56 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "runing"
