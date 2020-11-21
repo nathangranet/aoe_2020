@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ressource/other/hearth.png" type="Texture" id=1]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 2
+emission_box_extents = Vector3( 20, 10, 0 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 5.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 20.0
+angle = -90.0
+scale = 0.1
+
+[node name="HearthParticles2D" type="Particles2D"]
+rotation = -1.5708
+emitting = false
+amount = 20
+one_shot = true
+process_material = SubResource( 1 )
+texture = ExtResource( 1 )

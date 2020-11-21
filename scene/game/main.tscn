@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scene/game/bonom.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene/game/map.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/game/main.gd" type="Script" id=3]
+[ext_resource path="res://scene/game/EndDetector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ressource/sound/Twin_Musicom_-_Carefree_Melody.ogg" type="AudioStream" id=5]
+
+[node name="main" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="map" parent="." instance=ExtResource( 2 )]
+position = Vector2( 252.219, 440.868 )
+
+[node name="bonom" parent="." instance=ExtResource( 1 )]
+position = Vector2( 575.519, 1106.04 )
+
+[node name="Camera2D" type="Camera2D" parent="bonom"]
+current = true
+zoom = Vector2( 1.5, 1.5 )
+
+[node name="EndDetector" parent="." instance=ExtResource( 4 )]
+position = Vector2( 53412.2, 628.035 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -26.0
+autoplay = true
+[connection signal="player_die" from="bonom" to="." method="_on_bonom_player_die"]
+[connection signal="game_ended" from="EndDetector" to="." method="_on_EndDetector_game_ended"]

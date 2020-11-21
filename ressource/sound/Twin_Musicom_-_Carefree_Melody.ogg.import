@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Twin_Musicom_-_Carefree_Melody.ogg-e25ca09d2c9e7ffc94b2898796ef700b.oggstr"
+
+[deps]
+
+source_file="res://ressource/sound/Twin_Musicom_-_Carefree_Melody.ogg"
+dest_files=[ "res://.import/Twin_Musicom_-_Carefree_Melody.ogg-e25ca09d2c9e7ffc94b2898796ef700b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
