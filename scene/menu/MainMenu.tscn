@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://ressource/font/grizzly.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://ressource/tilemap/tilemap.tres" type="TileSet" id=2]
@@ -11,6 +11,10 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 75
 font_data = ExtResource( 1 )
 
 [node name="MainMenu" type="Control"]
@@ -51,11 +55,25 @@ __meta__ = {
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -391.5
-margin_top = 200.0
+margin_top = 150.0
 margin_right = 391.5
 margin_bottom = 105.0
 custom_fonts/font = SubResource( 2 )
 text = "ninjascape"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -391.5
+margin_top = 250.0
+margin_right = 391.5
+margin_bottom = 105.0
+custom_fonts/font = SubResource( 3 )
+text = "message of the victory"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
