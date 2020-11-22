@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scene/game/bonom.gd" type="Script" id=1]
 [ext_resource path="res://ressource/character/head.png" type="Texture" id=2]
 [ext_resource path="res://ressource/character/body.png" type="Texture" id=3]
 [ext_resource path="res://ressource/character/arm.png" type="Texture" id=4]
 [ext_resource path="res://ressource/character/leg.png" type="Texture" id=5]
+[ext_resource path="res://ressource/character/dahs.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 35.1562, 145.712 )
@@ -334,6 +335,21 @@ tracks/12/keys = {
 "values": [ Vector2( 0, 120 ) ]
 }
 
+[sub_resource type="Gradient" id=6]
+colors = PoolColorArray( 1, 1, 1, 0.870588, 1, 1, 1, 0.0352941 )
+
+[sub_resource type="GradientTexture" id=7]
+gradient = SubResource( 6 )
+
+[sub_resource type="ParticlesMaterial" id=8]
+emission_shape = 2
+emission_box_extents = Vector3( 40, 110, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 7 )
+
 [node name="bonom" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -351,13 +367,14 @@ __meta__ = {
 
 [node name="Head" type="Sprite" parent="Node2D"]
 position = Vector2( 2.50333, -60.2027 )
+z_index = 4
 texture = ExtResource( 2 )
-offset = Vector2( 0, -50 )
+offset = Vector2( -6, -50 )
 
 [node name="Arm1" type="Sprite" parent="Node2D"]
 position = Vector2( -8.00201, -44.5385 )
 texture = ExtResource( 4 )
-offset = Vector2( 0, 50 )
+offset = Vector2( 30, 60 )
 
 [node name="Leg1" type="Sprite" parent="Node2D"]
 position = Vector2( -3.78172, 38.1994 )
@@ -376,7 +393,7 @@ offset = Vector2( 0, 50 )
 [node name="Arm2" type="Sprite" parent="Node2D"]
 position = Vector2( -0.767601, -39.0398 )
 texture = ExtResource( 4 )
-offset = Vector2( 0, 50 )
+offset = Vector2( -36, 50 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "runing"
@@ -384,3 +401,13 @@ anims/jump = SubResource( 3 )
 anims/runing = SubResource( 4 )
 anims/slide = SubResource( 5 )
 blend_times = [ "slide", "runing", 0.2, "slide", "slide", 0.5 ]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( -115.743, 2.39429 )
+z_index = -1
+emitting = false
+amount = 20
+one_shot = true
+preprocess = 0.1
+process_material = SubResource( 8 )
+texture = ExtResource( 6 )
