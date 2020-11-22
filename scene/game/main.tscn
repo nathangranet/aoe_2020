@@ -21,7 +21,7 @@ current = true
 zoom = Vector2( 2, 2 )
 
 [node name="EndDetector" parent="." instance=ExtResource( 4 )]
-position = Vector2( 53412.2, 628.035 )
+position = Vector2( 32385.5, 594.683 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
