@@ -93,3 +93,5 @@ text = "SPACE"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="checkpoint_activated" from="CheckpointContainer/Checkpoint" to="." method="_on_Checkpoint_checkpoint_activated"]
+[connection signal="checkpoint_activated" from="CheckpointContainer/Checkpoint2" to="." method="_on_Checkpoint2_checkpoint_activated"]
