@@ -13,11 +13,11 @@ script = ExtResource( 3 )
 position = Vector2( 252.219, 440.868 )
 
 [node name="bonom" parent="." instance=ExtResource( 1 )]
-position = Vector2( 575.519, 1106.04 )
+position = Vector2( -2286.31, 1106.04 )
 
 [node name="Camera2D" type="Camera2D" parent="bonom"]
 current = true
-zoom = Vector2( 1.5, 1.5 )
+zoom = Vector2( 2, 2 )
 
 [node name="EndDetector" parent="." instance=ExtResource( 4 )]
 position = Vector2( 53412.2, 628.035 )
