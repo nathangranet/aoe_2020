@@ -15,6 +15,7 @@ export(float) var SLIDE_DURATION = 1
 export(float) var HIDE_DURATION = 1
 export(float) var STEALTH_COOLDOWN = 1
 
+const bullet = preload("shuriken.tscn")
 var vel = Vector2.ZERO
 var dash_timer = Timer.new()
 var slide_timer = Timer.new()
@@ -46,6 +47,10 @@ func _physics_process(delta):
 		vel = move_and_slide(vel, Vector2.UP)
 		if Input.is_action_just_pressed("movement_slide"):
 			slide()
+		if Input.is_action_just_pressed("shuriken"):
+			var s = bullet.instance()
+			s.global_position = self.global_position
+			self.get_parent().add_child(s)
 
 
 func update_velocity():
