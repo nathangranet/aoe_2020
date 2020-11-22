@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ressource/aaa/body.png" type="Texture" id=1]
+[ext_resource path="res://ressource/aaa/arm.png" type="Texture" id=2]
+[ext_resource path="res://ressource/aaa/leg.png" type="Texture" id=3]
+[ext_resource path="res://ressource/aaa/head.png" type="Texture" id=4]
+
+[node name="Bern" type="Node2D"]
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( -12.4726, 4.00906 )
+rotation = -1.14319
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -22.4746, 95.1425 )
+rotation = 1.52367
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+flip_v = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -3.03947, -6.44939 )
+rotation = 1.5708
+scale = Vector2( 0.24, 0.24 )
+texture = ExtResource( 1 )
+flip_v = true
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( -1.87286, 97.39 )
+rotation = 1.52193
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+flip_v = true
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 7.57263, -98.4443 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( -12.4726, 4.00906 )
+rotation = -1.39626
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+flip_h = true
