@@ -30,7 +30,9 @@ margin_top = -198.938
 margin_right = 471.747
 margin_bottom = -145.938
 custom_fonts/font = SubResource( 1 )
-text = "GG! you escape from the friendly nounours"
+text = "GG! you delivered the message and 
+saved everyone from the friendly bears"
+align = 1
 
 [node name="Button" type="Button" parent="."]
 anchor_left = 0.5
