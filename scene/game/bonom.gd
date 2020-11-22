@@ -87,6 +87,7 @@ func dash():
 	dashing = true
 	dashed = true
 	dash_timer.start(DASH_DURATION)
+	$Particles2D.emitting = true
 
 func stealth():
 	stealth = true
@@ -109,6 +110,7 @@ func _on_slide_timer_timeout():
 
 func _on_dash_timer_timeout():
 	dashing = false
+	$Particles2D.emitting = false
 
 func _on_stealth_timer_timeout():
 	stealth = false
